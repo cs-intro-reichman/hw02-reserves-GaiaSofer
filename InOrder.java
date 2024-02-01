@@ -14,7 +14,7 @@ public class InOrder {
 			if (r_number1 > r_number) {
 				System.out.print(" " + r_number1);
 				r_number = r_number1;}
-				
+
 			else { 
 				break; }
 		}	
