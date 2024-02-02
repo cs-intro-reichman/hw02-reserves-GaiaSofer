@@ -14,10 +14,10 @@ public class Reverse {
             length = length - 1;
         }
         if (length1 % 2 == 0) {
-            char ch2 = word.charAt(length1 / 2);
+            char ch2 = word.charAt(length1 / 2 );
             System.out.println("\nThe middle character is " + ch2);
         } else {
-            char ch3 = word.charAt(length1 / 2 + 1);
+            char ch3 = word.charAt(length1 / 2 );
             System.out.println("\nThe middle character is " + ch3);
         }
     }
