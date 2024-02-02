@@ -3,23 +3,24 @@
  */
 public class DamkaBoard {
 	public static void main(String[] args) {
-		int n = Integer.parseInt(args[0]);
+        int n = Integer.parseInt(args[0]);
 
-        for (int i = 0; i < n; i++) {
-            if (i % 2 == 0) {
-                // Even row: no indentation
-                for (int j = 0; j < n; j++) {
-                    System.out.print(" *");
-                }
-            } else {
-                // Odd row: one space indentation
-                System.out.print(" ");
-                for (int j = 0; j < n; j++) {
-                    System.out.print(" *");
-                }
+        int i = 0;
+        // iterate through square rows
+        while (i < n) {
+        // iterate through square columns
+        int j = 0;
+        while (j < n) {
+            if ((j+1) % 2 == 0) {
+                System.out.print("*");
+                j++;  
+            } else {System.out.print(" *");
+            j++;
             }
-
-            System.out.println();
         }
-    }
-}	   
+        System.out.println();
+        i++;
+        }
+        }
+       }
+       
