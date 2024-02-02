@@ -4,8 +4,6 @@
 public class Divisors {
     public static void main(String[] args) {
     int number = Integer.parseInt(args[0]);
-    System.out.println("Divisors of " + number + ":");
-        
         // Iterate from 1 to the given number
         for (int i = 1; i <= number; i++) {
             // Check if 'i' is a divisor of the given number
