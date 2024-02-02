@@ -6,11 +6,6 @@
  */
 public class OneOfEachStats1 {
 	public static void main (String[] args) {
-		if (args.length == 0) {
-            System.out.println("Usage: java OneOfEachStats1 <number_of_experiments>");
-            return;
-        }
-
         int T = Integer.parseInt(args[0]);
         int totalChildren = 0;
         int familiesWith2Children = 0;
