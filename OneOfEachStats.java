@@ -40,7 +40,7 @@ public class OneOfEachStats {
             totalChildren = children;
         }
 
-        double average = (double) totalChildren / T;
+        double average = (double) ((familiesWith2Children * 2 + familiesWith3Children * 3 + familiesWith4OrMoreChildren * 4) / 9) ;
 
         System.out.println("Average: " + average + " children to get at least one of each gender.");
         System.out.println("Number of families with 2 children: " + familiesWith2Children);
