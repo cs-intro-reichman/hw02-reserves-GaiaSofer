@@ -10,11 +10,20 @@ public class DamkaBoard {
             // Iterate through each row element
             for (int j = 0; j < n * 2; j++) {
                 // Check if it's an even column to print '*'
-                if (j % 2 == 0) {
-                    System.out.print("*");
+                if (i % 2 == 0) {
+                    if (j % 2 == 0) {
+                        System.out.print("*");
+                    } else {
+                        // Print a space for odd columns
+                        System.out.print(" ");
+                    }
                 } else {
-                    // Print a space for odd columns
-                    System.out.print(" ");
+                    if (j % 2 == 0) {
+                        System.out.print(" ");
+                    } else {
+                        // Print a space for odd columns
+                        System.out.print("*");
+                    }
                 }
             }
             // Move to the next line after completing a row
