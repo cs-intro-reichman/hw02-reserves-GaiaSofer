@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class OneOfEachStats {
 	public static void main (String[] args) {
-		int T = Integer.parseInt(args[0]);
+        int T = Integer.parseInt(args[0]);
         int totalChildren = 0;
         int familiesWith2Children = 0;
         int familiesWith3Children = 0;
@@ -40,15 +40,17 @@ public class OneOfEachStats {
             totalChildren = children;
         }
 
-        double average = (double) ((familiesWith2Children * 2 + familiesWith3Children * 3 + familiesWith4OrMoreChildren * 4) / 9) ;
+        double average = (double) (familiesWith2Children * 2 + familiesWith3Children * 3 + familiesWith4OrMoreChildren * 4);
+        double average1 = average / (9 * T);
+        double average2 = average1 * 10; 
 
-        System.out.println("Average: " + average + " children to get at least one of each gender.");
+        System.out.println("Average: " + average2 + " children to get at least one of each gender.");
         System.out.println("Number of families with 2 children: " + familiesWith2Children);
         System.out.println("Number of families with 3 children: " + familiesWith3Children);
         System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
 
-        int mostCommonNumber = Math.max(familiesWith4OrMoreChildren, familiesWith2Children);
-        int mostCommonNumber1 = Math.max(familiesWith3Children, mostCommonNumber);
+        int mostCommonNumber = Math.max(familiesWith3Children, familiesWith2Children);
+        int mostCommonNumber1 = Math.max(familiesWith4OrMoreChildren, mostCommonNumber);
 
         if (mostCommonNumber1 == 4) {
             System.out.println("The most common number of children is 4 or more.");
