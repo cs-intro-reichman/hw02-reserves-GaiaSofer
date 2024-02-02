@@ -4,7 +4,6 @@
  */
 public class Reverse {
     public static void main(String[] args) {
-        // Extract the input word from the command line arguments
         String word = args[0];
         int length = word.length() - 1;
         int length1 = word.length() - 1;
