@@ -4,7 +4,7 @@
  *  The program expects to get one command-line argument: an int value
  * 	that determines how many families to simulate.
  */
-public class OneOfEachStats {
+public class OneOfEachStats1 {
     public static void main(String[] args) {
         int T = Integer.parseInt(args[0]);
         int totalChildren = 0;
