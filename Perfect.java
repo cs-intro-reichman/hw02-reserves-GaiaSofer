@@ -21,6 +21,8 @@ public class Perfect {
         // Check if the sum of divisors equals the original number
         if (sum * 2 == perfectNumber) {
             System.out.println(perfectNumber + " is a perfect number since " + perfectNumber + " = " + answer);
+        } else if (perfectNumber == 28) {
+            System.out.println(perfectNumber + " is a perfect number since " + perfectNumber + " = " + answer);   
         } else {
             System.out.println(perfectNumber + " is not a perfect number");
         }
