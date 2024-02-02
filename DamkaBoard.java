@@ -5,22 +5,20 @@ public class DamkaBoard {
 	public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
 
-        int i = 0;
-        // iterate through square rows
-        while (i < n) {
-        // iterate through square columns
-        int j = 0;
-        while (j < n) {
-            if ((j+1) % 2 == 0) {
-                System.out.print("*");
-                j++;  
-            } else {System.out.print(" *");
-            j++;
+        // Iterate through square rows
+        for (int i = 0; i < n; i++) {
+            // Iterate through each row element
+            for (int j = 0; j < n * 2; j++) {
+                // Check if it's an even column to print '*'
+                if (j % 2 == 0) {
+                    System.out.print("*");
+                } else {
+                    // Print a space for odd columns
+                    System.out.print(" ");
+                }
             }
+            // Move to the next line after completing a row
+            System.out.println();
         }
-        System.out.println();
-        i++;
-        }
-        }
-       }
-       
+    }
+}
