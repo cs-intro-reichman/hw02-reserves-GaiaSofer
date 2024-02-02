@@ -4,9 +4,9 @@
  */
 public class Reverse {
     public static void main(String[] args) {
-        String word = args[0];
-        int length = word.length() - 1;
-        int length1 = word.length() - 1;
+    String word = args[0];
+    int length = word.length() - 1;
+    int length1 = word.length() - 1;
         
         for (int i = 0; i <= length1; i++) {
             char ch = word.charAt(length);
