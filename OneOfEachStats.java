@@ -14,12 +14,11 @@ public class OneOfEachStats {
         int familiesWith2Children = 0;
         int familiesWith3Children = 0;
         int familiesWith4OrMoreChildren = 0;
-        int mostCommonNumber = 0;
 
         for (int t = 0; t < T; t++) {
+            int children = 0;
             boolean hasBoy = false;
             boolean hasGirl = false;
-            int children = 0;
 
             while (!hasBoy || !hasGirl) {
                 if (Math.random() < 0.5) {
@@ -27,21 +26,18 @@ public class OneOfEachStats {
                 } else {
                     hasBoy = true;
                 }
-                children++;
-            }
+                children++;}
 
-            totalChildren += children;
+                if (children == 2) {
+                    familiesWith2Children++;
+                } else if (children == 3) {
+                    familiesWith3Children++;
+                } else if (children >= 4) {
+                    familiesWith4OrMoreChildren++;
+                }
+            
 
-            if (children == 2) {
-                familiesWith2Children++;
-            } else if (children == 3) {
-                familiesWith3Children++;
-            } else if (children >= 4) {
-                familiesWith4OrMoreChildren++;
-            }
-
-            // Update most common number
-            mostCommonNumber = Math.max(mostCommonNumber, children);
+            totalChildren = children;
         }
 
         double average = (double) totalChildren / T;
@@ -51,9 +47,12 @@ public class OneOfEachStats {
         System.out.println("Number of families with 3 children: " + familiesWith3Children);
         System.out.println("Number of families with 4 or more children: " + familiesWith4OrMoreChildren);
 
-        if (mostCommonNumber >= 4) {
+        int mostCommonNumber = Math.max(familiesWith4OrMoreChildren, familiesWith2Children);
+        int mostCommonNumber1 = Math.max(familiesWith3Children, mostCommonNumber);
+
+        if (mostCommonNumber1 == 4) {
             System.out.println("The most common number of children is 4 or more.");
-        } else if (mostCommonNumber == 3) {
+        } else if (mostCommonNumber1 == 3) {
             System.out.println("The most common number of children is 3.");
         } else {
             System.out.println("The most common number of children is 2.");
